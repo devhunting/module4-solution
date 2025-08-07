@@ -1,48 +1,51 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to right, #dbe6f6, #c5796d);
+  background: linear-gradient(135deg, #dbe6f6 0%, #c5796d 100%);
   margin: 0;
   padding: 40px;
-  color: #333;
+  color: #2c3e50;
   text-align: center;
 }
 
 h1 {
-  color: #2c3e50;
+  color: #1b2838;
   font-size: 3em;
   margin-bottom: 30px;
-  text-shadow: 1px 1px 2px #fff;
+  text-shadow: 1px 1px 3px rgba(255 255 255 / 0.8);
 }
 
 #container {
   max-width: 600px;
   margin: auto;
-  background: #ffffffcc;
+  background: rgba(255 255 255 / 0.85);
   padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 20px rgba(27, 40, 56, 0.15);
 }
 
-/* Updated colors here: softer blue and red */
+/* Calm blue for Hello messages */
 .hello {
-  color: #007bff; /* soft blue */
-  font-weight: bold;
+  color: #3a6ea5; /* steel blue */
+  font-weight: 600;
   font-size: 1.3em;
   margin: 10px 0;
+  text-shadow: 0 1px 1px rgba(255 255 255 / 0.6);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Warm, soft red for Goodbye messages */
 .goodbye {
-  color: #dc3545; /* soft red */
-  font-weight: bold;
+  color: #a53a3a; /* muted warm red */
+  font-weight: 600;
   font-size: 1.3em;
   margin: 10px 0;
+  text-shadow: 0 1px 1px rgba(255 255 255 / 0.6);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Optional: subtle hover effect for polish */
+/* Subtle hover effect */
 .hello:hover,
 .goodbye:hover {
-  opacity: 0.8;
+  opacity: 0.85;
   cursor: default;
 }
