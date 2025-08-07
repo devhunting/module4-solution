@@ -1,10 +1,12 @@
-(function (window) {
-  var goodbyeSpeaker = {};
-  var speakWord = "Good Bye";
+var byeSpeaker = {};
 
-  goodbyeSpeaker.speak = function (name) {
-    console.log(speakWord + " " + name);
-  };
+byeSpeaker.speak = function(name) {
+  var message = "Good Bye " + name;
+  console.log(message);
 
-  window.goodbyeSpeaker = goodbyeSpeaker;
-})(window);
+  var greetingsDiv = document.getElementById("greetings");
+  var p = document.createElement("p");
+  p.textContent = message;
+  p.className = "goodbye";
+  greetingsDiv.appendChild(p);
+};
