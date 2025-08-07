@@ -23,16 +23,26 @@ h1 {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Updated colors here: softer blue and red */
 .hello {
-  color: #27ae60;
+  color: #007bff; /* soft blue */
   font-weight: bold;
   font-size: 1.3em;
   margin: 10px 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .goodbye {
-  color: #c0392b;
+  color: #dc3545; /* soft red */
   font-weight: bold;
   font-size: 1.3em;
   margin: 10px 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Optional: subtle hover effect for polish */
+.hello:hover,
+.goodbye:hover {
+  opacity: 0.8;
+  cursor: default;
 }
