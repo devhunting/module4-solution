@@ -1,51 +1,102 @@
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #dbe6f6 0%, #c5796d 100%);
+/* Reset some defaults */
+* {
+  box-sizing: border-box;
   margin: 0;
-  padding: 40px;
-  color: #2c3e50;
-  text-align: center;
+  padding: 0;
 }
 
-h1 {
-  color: #1b2838;
-  font-size: 3em;
-  margin-bottom: 30px;
-  text-shadow: 1px 1px 3px rgba(255 255 255 / 0.8);
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #5a6ca8, #c0785a);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  color: #2e3440;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 #container {
+  background: rgba(255 255 255 / 0.95);
   max-width: 600px;
-  margin: auto;
-  background: rgba(255 255 255 / 0.85);
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(27, 40, 56, 0.15);
+  width: 100%;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.15),
+    0 6px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: box-shadow 0.3s ease;
 }
 
-/* Calm blue for Hello messages */
-.hello {
-  color: #3a6ea5; /* steel blue */
+#container:hover {
+  box-shadow:
+    0 14px 40px rgba(0, 0, 0, 0.22),
+    0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  font-size: 3.2rem;
+  color: #3c3f58;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Message styling */
+.hello, .goodbye {
+  font-size: 1.5rem;
   font-weight: 600;
-  font-size: 1.3em;
-  margin: 10px 0;
-  text-shadow: 0 1px 1px rgba(255 255 255 / 0.6);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* Warm, soft red for Goodbye messages */
-.goodbye {
-  color: #a53a3a; /* muted warm red */
-  font-weight: 600;
-  font-size: 1.3em;
-  margin: 10px 0;
-  text-shadow: 0 1px 1px rgba(255 255 255 / 0.6);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* Subtle hover effect */
-.hello:hover,
-.goodbye:hover {
-  opacity: 0.85;
+  margin: 0.6rem 0;
+  padding: 12px 25px;
+  border-radius: 12px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow:
+    0 3px 8px rgba(0,0,0,0.12);
+  transition: background-color 0.25s ease, color 0.25s ease;
+  user-select: none;
   cursor: default;
+}
+
+/* Hello messages: elegant blue background with white text */
+.hello {
+  background-color: #4a90e2;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Goodbye messages: soft coral background with white text */
+.goodbye {
+  background-color: #e94e3f;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Hover effect to gently brighten background */
+.hello:hover {
+  background-color: #559de8;
+}
+
+.goodbye:hover {
+  background-color: #f15648;
+}
+
+/* Responsive font sizing */
+@media (max-width: 600px) {
+  #container {
+    padding: 30px 25px;
+  }
+  h1 {
+    font-size: 2.4rem;
+  }
+  .hello, .goodbye {
+    font-size: 1.25rem;
+    padding: 10px 20px;
+  }
 }
